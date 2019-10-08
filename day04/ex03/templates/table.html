@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+Form
+{% endblock %}
+
+{% block content %}
+<table>
+    <tr>
+        <th>Noir</th>
+        <th>Rouge</th>
+        <th>Bleu</th>
+        <th>Vert</th>
+    </tr>
+
+    {% for row in rows %}
+    <tr>
+        {% for couleur in row %}
+            <td style="background-color: {{ couleur }} ;"></td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
